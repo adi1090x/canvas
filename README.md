@@ -23,12 +23,13 @@ A `bash` script to generate and apply different types of **gradient** & **blured
 + Generate a `random blured` wallpaper
 + Generate linear, radial, bilinear(4 colored) & twisted `gradient` wallpapers
 + Generate random, twisted or colored `plasma` wallpapers
-
++ Allows you to pick colors
 
 ### Dependencies
 
 + `imagemagick`
 + `feh`
++ `colorpicker` : [AUR](https://aur.archlinux.org/packages/colorpicker/) | [Github](https://github.com/Jack12816/colorpicker)
 + `xrandr` (only for xfce)
 
 ### Installation
@@ -185,10 +186,9 @@ In terminal, *xfconf-query* will print lines starting with `set:`, which show wh
 
 ### Todo
 
-- [ ] Add color picker
+- [x] Add color picker
+- [ ] Get colors from shell color-scheme
 - [ ] Pattern generation
-- [ ] Tiled wallpaper generation
-
 
 ### Support This Project
 <p align="left">
