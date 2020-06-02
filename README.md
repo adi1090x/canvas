@@ -177,7 +177,7 @@ In terminal, *xfconf-query* will print lines starting with `set:`, which show wh
 ```bash
 91   ## For XFCE
 92   if [[ "$OSTYPE" == "linux"* ]]; then
-93   	   SCREEN="0"
+93   	 SCREEN="0"
 94       MONITOR="1"
 95   fi
 
