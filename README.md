@@ -187,7 +187,7 @@ In terminal, *xfconf-query* will print lines starting with `set:`, which show wh
 ### Todo
 
 - [x] Add color picker
-- [ ] Get colors from shell color-scheme
+- [ ] Get colors from .Xresources
 - [ ] Pattern generation
 
 ### Support This Project
