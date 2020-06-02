@@ -23,7 +23,7 @@ A `bash` script to generate and apply different types of **gradient** & **blured
 + Generate a `random blured` wallpaper
 + Generate linear, radial, bilinear(4 colored) & twisted `gradient` wallpapers
 + Generate random, twisted or colored `plasma` wallpapers
-+ Allows you to pick colors
++ Allows you to pick colors for wallpaper generation
 
 ### Dependencies
 
@@ -69,7 +69,7 @@ Options:
 
 ### Usage
 
-Here's a [list](https://imagemagick.org/www/script/color.php) of all supported color names.
+Though you can pick colors, Here's a [list](https://imagemagick.org/www/script/color.php) of all supported color names.
 
 **1**. Generate random blured wallpaper...
 
