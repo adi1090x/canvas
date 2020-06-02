@@ -135,6 +135,7 @@ set_bg() {
 	fi
 }
 
+## Show preview of generated image unless paramaters supplied tells it not
 showFeh() {
 	if [[ "$NOFEH" != "true" ]]; then
 		feh --borderless --scale-down --geometry="$PSIZE" --title="$NAME" "$DIR/$NAME" &>/dev/null &
@@ -328,10 +329,12 @@ blured_noise() {
 	set_bg
 }
 
+## Generate random number lower than giver parameter
 getRandomNumber() {
 	RNUM=$(( ($RANDOM % $1) + 1 ))
 }
 
+## Generate random color
 getRandomColor() {
 	RCOLOR="#"
 	for i in 1 2 3 4 5 6
@@ -359,6 +362,7 @@ getRandomColor() {
 	done
 }
 
+## Generate random shape option
 getRandomShape() {
 	getRandomNumber "4"
 	case $RNUM in
@@ -369,6 +373,7 @@ getRandomShape() {
 	esac
 }
 
+## Generate random wallpaper
 randomize() {
 	getRandomNumber "7"
 	case $RNUM in
