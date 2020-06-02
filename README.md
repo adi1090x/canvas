@@ -62,7 +62,7 @@ Options:
    -l   --linear	    Generate a linear gradient wallpaper
    -r   --radial	    Generate a radial gradient wallpaper
    -t   --twisted	    Generate a twisted gradient wallpaper
-   -b   --bilinear	  Generate a bilinear(4point) gradient wallpaper
+   -b   --bilinear	    Generate a bilinear(4point) gradient wallpaper
    -p   --plasma	    Generate a plasma wallpaper
 ```
 
@@ -86,7 +86,7 @@ Set as desktop background? (y/n): y
 
 **2**. Generate a solid color wallpaper...
 
-<img align="right" width="290" src="wallpapers/3.png">
+<img align="right" width="300" src="wallpapers/3.png">
 
 ```
 $ canvas -s
@@ -100,7 +100,7 @@ Set as desktop background? (y/n): y
 
 **3**. Generate a linear gradient wallpaper...
 
-<img align="right" width="290" src="wallpapers/4.png">
+<img align="right" width="300" src="wallpapers/4.png">
 
 ```
 $ canvas -l
@@ -114,7 +114,7 @@ Set as desktop background? (y/n): y
 
 **4**. Generate a radial gradient wallpaper...
 
-<img align="right" width="290" src="wallpapers/5.png">
+<img align="right" width="300" src="wallpapers/5.png">
 
 ```
 $ canvas -r
@@ -128,7 +128,7 @@ Enter the rotation angle (default is 0): 0
 
 **5**. Generate a twisted gradient wallpaper...
 
-<img align="right" width="290" src="wallpapers/6.png">
+<img align="right" width="300" src="wallpapers/6.png">
 
 ```
 $ canvas -t
@@ -142,7 +142,7 @@ Set as desktop background? (y/n): y
 
 **6**. Generate a bilinear gradient wallpaper...
 
-<img align="right" width="290" src="wallpapers/7.png">
+<img align="right" width="300" src="wallpapers/7.png">
 
 ```
 $ canvas -b
@@ -156,7 +156,7 @@ Smooth or Regular? (s/r): s
 
 **7**. Generate a plasma wallpaper...
 
-<img align="right" width="290" src="wallpapers/8.png">
+<img align="right" width="300" src="wallpapers/8.png">
 
 ```
 $ canvas -p
