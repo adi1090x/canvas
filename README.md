@@ -72,7 +72,7 @@ Here's a [list](https://imagemagick.org/www/script/color.php) of all supported c
 
 **1**. Generate random blured wallpaper...
 
-<img align="right" width="280" src="wallpapers/2.png">
+<img align="right" width="300" src="wallpapers/2.png">
 
 ```
 $ canvas -B
