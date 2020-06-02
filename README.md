@@ -13,14 +13,14 @@
 <a href="https://ko-fi.com/adi1090x"><img src="https://raw.githubusercontent.com/adi1090x/files/master/other/kofi.png" alt="Support me on ko-fi"></a>
 </p>
 
-A `bash` script to generate and apply different types of **gradient** & **blured** wallpapers.
+A `bash` script to generate and apply different types of **gradient** & **blurred** wallpapers.
 
 ![main](wallpapers/main.png)
 
 ### Features
 
 + Generate a `solid color` wallpaper
-+ Generate a `random blured` wallpaper
++ Generate a `random blurred` wallpaper
 + Generate linear, radial, bilinear(4 colored) & twisted `gradient` wallpapers
 + Generate random, twisted or colored `plasma` wallpapers
 + Allows you to pick colors for wallpaper generation
@@ -58,7 +58,7 @@ Usage : canvas [-h] [-S px] [-B] [-s] [-l] [-r] [-t] [-b] [-p]
 Options:
    -h   --help		    Show this help message & exit
    -S   --size		    Size of the wallpaper (default is 1366x768)
-   -B   --blured	    Generate a random blured wallpaper
+   -B   --blurred	    Generate a random blurred wallpaper
    -s   --solid		    Generate a solid color wallpaper
    -l   --linear	    Generate a linear gradient wallpaper
    -r   --radial	    Generate a radial gradient wallpaper
@@ -71,7 +71,7 @@ Options:
 
 Though you can pick colors, Here's a [list](https://imagemagick.org/www/script/color.php) of all supported color names.
 
-**1**. Generate random blured wallpaper...
+**1**. Generate random blurred wallpaper...
 
 ```
 $ canvas -B
@@ -81,7 +81,7 @@ Enter the blur strength (maximum 30): 12
 Set as desktop background? (y/n): y
 ```
 
-|Blured 1|Blured 2|
+|blurred 1|blurred 2|
 |-|-|
 |![img](wallpapers/1.png)|![img](wallpapers/2.png)|
 
