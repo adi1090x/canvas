@@ -131,43 +131,77 @@ set_bg() {
 
 ## Pick the colors
 color_picker() {
-	if [[ "$SOLID" == "true" ]]; then
-		echo
-		echo -e $Y"Pick a color..."
-		COLOR=$(colorpicker --short --one-shot)
-		echo
-		echo -e $Y"Generating wallpaper with color:$G $COLOR"
-	elif [[ "$GRADIENT" == "true" ]] || [[ "$RGRADIENT" == "true" ]] || [[ "$TGRADIENT" == "true" ]]; then
-		echo
-		echo -e $Y"Pick first color..."
-		color1=$(colorpicker --short --one-shot)
-		echo -e $Y"Pick second color..."
-		color2=$(colorpicker --short --one-shot)
-		COLOR="$color1-$color2"
-		echo
-		echo -e $Y"Generating wallpaper with colors:$G $color1, $color2"
-	elif [[ "$BGRADIENT" == "true" ]]; then
-		echo
-		echo -e $Y"Pick first color..."
-		color1=$(colorpicker --short --one-shot)
-		echo -e $Y"Pick second color..."
-		color2=$(colorpicker --short --one-shot)
-		echo -e $Y"Pick third color..."
-		color3=$(colorpicker --short --one-shot)
-		echo -e $Y"Pick fourth color..."
-		color4=$(colorpicker --short --one-shot)
-		echo
-		echo -e $Y"Generating wallpaper with colors:$G $color1, $color2, $color3 & $color4"
-	fi
+  if [[ "$SOLID" == "true" ]]; then
+    echo
+    echo -e $Y"Pick a color..."
+    COLOR=$(colorpicker --short --one-shot)
+    echo
+    echo -e $Y"Generating wallpaper with color:$G $COLOR"
+  elif [[ "$GRADIENT" == "true" ]] || [[ "$RGRADIENT" == "true" ]] || [[ "$TGRADIENT" == "true" ]]; then
+    echo
+    echo -e $Y"Pick first color..."
+    color1=$(colorpicker --short --one-shot)
+    echo -e $Y"Pick second color..."
+    color2=$(colorpicker --short --one-shot)
+    COLOR="$color1-$color2"
+    echo
+    echo -e $Y"Generating wallpaper with colors:$G $color1, $color2"
+  elif [[ "$BGRADIENT" == "true" ]]; then
+    echo
+    echo -e $Y"Pick first color..."
+    color1=$(colorpicker --short --one-shot)
+    echo -e $Y"Pick second color..."
+    color2=$(colorpicker --short --one-shot)
+    echo -e $Y"Pick third color..."
+    color3=$(colorpicker --short --one-shot)
+    echo -e $Y"Pick fourth color..."
+    color4=$(colorpicker --short --one-shot)
+    echo
+    echo -e $Y"Generating wallpaper with colors:$G $color1, $color2, $color3 & $color4"
+  fi
+}
+
+# Get X colors
+get_Xcolor() {
+  declare -a Xcolors
+	while read l; do
+		[[ $l != *"*."* ]] && continue
+		lineseg=( $l )
+		index=$(echo $l | sed -e "s/\s.*//" -e "s/^*.//" -e "s/color//" -e "s/:$//")
+		color=$(echo $l | sed -e "s/.*\s//")
+		xcolors[index]="${color}"
+	done <<< "$(xrdb -query)"
+  echo
+  echo -ne $Y"Enter first index ( 0 ~ 15 ):$G "
+  read index
+  color1="${xcolors[index]}"
+  COLOR="${xcolors[index]}"
+  [[ "$SOLID" == true ]] && return
+  echo -ne $Y"Enter second index ( 0 ~ 15 ):$G "
+  read index
+  color2="${xcolors[index]}"
+  if [[ "$GRADIENT" == "true" ]] || [[ "$RGRADIENT" == "true" ]] || [[ "$TGRADIENT" == "true" ]]; then
+    COLOR="${color1}-${color2}"
+    echo $COLOR
+    return
+  fi
+  echo -ne $Y"Enter thrid index ( 0 ~ 15 ):$G "
+  read index
+  color3="${xcolors[index]}"
+  echo -ne $Y"Enter fourth index ( 0 ~ 15 ):$G "
+  read index
+  color4="${xcolors[index]}"
 }
 
 ## Get colors
 get_color() {
 	echo
-	echo -ne $Y"Pick Colors or Enter Colors? (p/e):$G "
+	echo -ne $Y"Pick Colors, Enter Colors, or Get Colors From XResourse? (p/e/x):$G "
 	read ANS
 	if [[ $ANS == "p" ]] || [[ $ANS == "P" ]]; then
 		color_picker
+  elif [[ $ANS == "x" ]] || [[ $ANS == "X" ]]; then
+    get_Xcolor
 	else
 		if [[ "$SOLID" == "true" ]]; then	
 			echo
