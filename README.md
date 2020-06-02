@@ -15,7 +15,7 @@
 
 A `bash` script to generate and apply different types of **gradient** & **blured** wallpapers.
 
-![main](wallpapers/1.png)
+![main](wallpapers/main.png)
 
 ### Features
 
