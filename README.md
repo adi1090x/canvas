@@ -15,7 +15,7 @@
 
 A `bash` script to generate and apply different types of **gradient** & **blured** wallpapers.
 
-![main](wallpapers/main.png)
+![main](images/main.png)
 
 ### Features
 
@@ -73,66 +73,128 @@ Though you can pick colors, Here's a [list](https://imagemagick.org/www/script/c
 
 **1**. Generate random blured wallpaper...
 
-<img align="right" width="300" src="wallpapers/2.png">
-
 ```
 $ canvas -B
 
-Enter the blur strength (maximum 30): 14 
+Enter the blur strength (maximum 30): 12
 
 Set as desktop background? (y/n): y
-
-
 ```
 
-**2**. Generate a solid color wallpaper...
+|Blured 1|Blured 2|
+|-|-|
+|![img](images/1.png)|![img](images/2.png)|
 
-<img align="right" width="300" src="wallpapers/3.png">
+**2**. Generate a solid color wallpaper...
 
 ```
 $ canvas -s
 
-Enter the color name or hex (eg: teal, #EBCB8B): #A3BE8C
+Pick Colors or Enter Colors? (p/e): p
+
+Pick a color...
+
+Generating wallpaper with color: #BA68C8
 
 Set as desktop background? (y/n): y
 
+$ canvas -s
 
+Pick Colors or Enter Colors? (p/e): e
+
+Enter the color name or hex (eg: teal, #EBCB8B): #A3BE8C
+
+Set as desktop background? (y/n): y
 ```
+|Solid - #BA68C8|Solid - #A3BE8C|
+|-|-|
+|![img](images/3.png)|![img](images/4.png)|
 
 **3**. Generate a linear gradient wallpaper...
-
-<img align="right" width="300" src="wallpapers/4.png">
 
 ```
 $ canvas -l
 
+Pick Colors or Enter Colors? (p/e): p 
+
+Pick first color...
+Pick second color...
+
+Generating wallpaper with colors: #FB8784, #70D675
+
+Enter the rotation angle (default is 0): 60 
+
+Set as desktop background? (y/n): y
+
+$ canvas -l
+
+Pick Colors or Enter Colors? (p/e): e
+
 Enter the colors name or hex (format: color1-color2): orange-purple
 
-Enter the rotation angle (default is 0): 45
+Enter the rotation angle (default is 0): 90
 
 Set as desktop background? (y/n): y
 ```
 
-**4**. Generate a radial gradient wallpaper...
+|Linear Gradient 1|Linear Gradient 2|
+|-|-|
+|![img](images/5.png)|![img](images/6.png)|
 
-<img align="right" width="300" src="wallpapers/5.png">
+**4**. Generate a radial gradient wallpaper...
 
 ```
 $ canvas -r
 
-Enter the colors name or hex (format: color1-color2): cyan-#2E3440
+Pick Colors or Enter Colors? (p/e): p
 
-Shape? (diagonal, ellipse, maximum, minimum): diagonal 
+Pick first color...
+Pick second color...
+
+Generating wallpaper with colors: #DA0B86, #200D74
+
+Shape? (diagonal, ellipse, maximum, minimum): maximum
 
 Enter the rotation angle (default is 0): 0
+
+Set as desktop background? (y/n): y
+
+$ canvas -r
+
+Pick Colors or Enter Colors? (p/e): e
+
+Enter the colors name or hex (format: color1-color2): red-black
+
+Shape? (diagonal, ellipse, maximum, minimum): ellipse 
+
+Enter the rotation angle (default is 0): 20
+
+Set as desktop background? (y/n): y
 ```
+
+|Radial Gradient Max|Radial Gradient Ellipse|
+|-|-|
+|![img](images/7.png)|![img](images/8.png)|
 
 **5**. Generate a twisted gradient wallpaper...
 
-<img align="right" width="300" src="wallpapers/6.png">
-
 ```
 $ canvas -t
+
+Pick Colors or Enter Colors? (p/e): p
+
+Pick first color...
+Pick second color...
+
+Generating wallpaper with colors: #EC7875, #61C766
+
+Enter the twisting amount (maximum 500): 200
+
+Set as desktop background? (y/n): y
+
+$ canvas -t
+
+Pick Colors or Enter Colors? (p/e): e
 
 Enter the colors name or hex (format: color1-color2): blue-pink
 
@@ -141,23 +203,47 @@ Enter the twisting amount (maximum 500): 180
 Set as desktop background? (y/n): y
 ```
 
-**6**. Generate a bilinear gradient wallpaper...
+|Twisted Gradient 1|Twisted Gradient 2|
+|-|-|
+|![img](images/9.png)|![img](images/10.png)|
 
-<img align="right" width="300" src="wallpapers/7.png">
+**6**. Generate a bilinear gradient wallpaper...
 
 ```
 $ canvas -b
 
-Enter first color (eg: red, #EC7875): cyan
-Enter second color (eg: green, #61C766): SpringGreen
-Enter third color (eg: yellow, #FDD835): orange
-Enter fourth color (eg: blue, #42A5F5): IndianRed1
+Pick Colors or Enter Colors? (p/e): p 
+
+Pick first color...
+Pick second color...
+Pick third color...
+Pick fourth color...
+
+Generating wallpaper with colors: #FB8784, #70D675, #FFE744 & #51B4FF
+
+Smooth or Regular? (s/r): r
+
+Set as desktop background? (y/n): y
+
+$ canvas -b
+
+Pick Colors or Enter Colors? (p/e): e
+
+Enter first color (eg: red, #EC7875): teal
+Enter second color (eg: green, #61C766): pink
+Enter third color (eg: yellow, #FDD835): purple
+Enter fourth color (eg: blue, #42A5F5): khaki
+
 Smooth or Regular? (s/r): s
+
+Set as desktop background? (y/n): y
 ```
 
-**7**. Generate a plasma wallpaper...
+|Bilinear 1|Bilinear 2|
+|-|-|
+|![img](images/11.png)|![img](images/12.png)|
 
-<img align="right" width="300" src="wallpapers/8.png">
+**7**. Generate a plasma wallpaper...
 
 ```
 $ canvas -p
@@ -166,8 +252,16 @@ Random, Twisted or Custom colors? (r/t/c): r
 
 Set as desktop background? (y/n): n
 
+$ canvas -p
 
+Random, Twisted or Custom colors? (r/t/c): t
+
+Set as desktop background? (y/n): n
 ```
+
+|Plasma Normal|Plasma Twisted|
+|-|-|
+|![img](images/13.png)|![img](images/14.png)|
 
 ### Common Issues
 
