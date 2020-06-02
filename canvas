@@ -63,7 +63,7 @@ Usage : canvas [-h] [-S px] [-B] [-s] [-l] [-r] [-t] [-b] [-p]
 Options:
    -h   --help		Show this help message & exit
    -S   --size		Size of the wallpaper (default is 1366x768)
-   -B   --blured	Generate a random blured wallpaper
+   -B   --blurred	Generate a random blurred wallpaper
    -s   --solid		Generate a solid color wallpaper
    -l   --linear	Generate a linear gradient wallpaper
    -r   --radial	Generate a radial gradient wallpaper
