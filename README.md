@@ -183,6 +183,13 @@ In terminal, *xfconf-query* will print lines starting with `set:`, which show wh
 
 ```
 
+### Todo
+
+- [ ] Add color picker
+- [ ] Pattern generation
+- [ ] Tiled wallpaper generation
+
+
 ### Support This Project
 <p align="left">
 <a href="https://www.paypal.me/adi1090x" target="_blank"><img alt="undefined" src="https://img.shields.io/badge/paypal-adi1090x-blue?style=for-the-badge&logo=paypal"></a>
