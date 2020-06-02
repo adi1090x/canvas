@@ -273,8 +273,8 @@ plasma() {
 	set_bg
 }
 
-## Generate a random, multi-colored blured/gradient wallpaper
-blured_noise() {
+## Generate a random, multi-colored blurred/gradient wallpaper
+blurred_noise() {
 	echo
 	echo -ne $Y"Enter the blur strength (maximum 30):$G "
 	read BLUR
@@ -285,7 +285,7 @@ blured_noise() {
 }
 
 ## Parse the arguments
-options=$(getopt -o S:,s,l,r,t,b,p,B,h --long size:,solid,linear,radial,twisted,bilinear,plasma,blured,help -- "$@")
+options=$(getopt -o S:,s,l,r,t,b,p,B,h --long size:,solid,linear,radial,twisted,bilinear,plasma,blurred,help -- "$@")
 eval set -- "$options"
 
 while true; do
@@ -313,7 +313,7 @@ while true; do
         -p|--plasma)
             PLASMA="true"
             ;;
-        -B|--blured)
+        -B|--blurred)
             NOISE="true"
             ;;
         -h|--help)
@@ -345,5 +345,5 @@ elif [[ "$BGRADIENT" == "true" ]]; then
 elif [[ "$PLASMA" == "true" ]]; then
 	plasma
 elif [[ "$NOISE" == "true" ]]; then
-	blured_noise
+	blurred_noise
 fi
