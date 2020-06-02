@@ -15,7 +15,7 @@
 
 A `bash` script to generate and apply different types of **gradient** & **blured** wallpapers.
 
-![main](images/main.png)
+![main](wallpapers/main.png)
 
 ### Features
 
@@ -83,7 +83,7 @@ Set as desktop background? (y/n): y
 
 |Blured 1|Blured 2|
 |-|-|
-|![img](images/1.png)|![img](images/2.png)|
+|![img](wallpapers/1.png)|![img](wallpapers/2.png)|
 
 **2**. Generate a solid color wallpaper...
 
@@ -108,7 +108,7 @@ Set as desktop background? (y/n): y
 ```
 |Solid - #BA68C8|Solid - #A3BE8C|
 |-|-|
-|![img](images/3.png)|![img](images/4.png)|
+|![img](wallpapers/3.png)|![img](wallpapers/4.png)|
 
 **3**. Generate a linear gradient wallpaper...
 
@@ -139,7 +139,7 @@ Set as desktop background? (y/n): y
 
 |Linear Gradient 1|Linear Gradient 2|
 |-|-|
-|![img](images/5.png)|![img](images/6.png)|
+|![img](wallpapers/5.png)|![img](wallpapers/6.png)|
 
 **4**. Generate a radial gradient wallpaper...
 
@@ -174,7 +174,7 @@ Set as desktop background? (y/n): y
 
 |Radial Gradient Max|Radial Gradient Ellipse|
 |-|-|
-|![img](images/7.png)|![img](images/8.png)|
+|![img](wallpapers/7.png)|![img](wallpapers/8.png)|
 
 **5**. Generate a twisted gradient wallpaper...
 
@@ -205,7 +205,7 @@ Set as desktop background? (y/n): y
 
 |Twisted Gradient 1|Twisted Gradient 2|
 |-|-|
-|![img](images/9.png)|![img](images/10.png)|
+|![img](wallpapers/9.png)|![img](wallpapers/10.png)|
 
 **6**. Generate a bilinear gradient wallpaper...
 
@@ -241,7 +241,7 @@ Set as desktop background? (y/n): y
 
 |Bilinear 1|Bilinear 2|
 |-|-|
-|![img](images/11.png)|![img](images/12.png)|
+|![img](wallpapers/11.png)|![img](wallpapers/12.png)|
 
 **7**. Generate a plasma wallpaper...
 
@@ -261,7 +261,7 @@ Set as desktop background? (y/n): n
 
 |Plasma Normal|Plasma Twisted|
 |-|-|
-|![img](images/13.png)|![img](images/14.png)|
+|![img](wallpapers/13.png)|![img](wallpapers/14.png)|
 
 ### Common Issues
 
