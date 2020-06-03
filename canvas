@@ -182,7 +182,6 @@ get_Xcolor() {
   color2="${xcolors[index]}"
   if [[ "$GRADIENT" == "true" ]] || [[ "$RGRADIENT" == "true" ]] || [[ "$TGRADIENT" == "true" ]]; then
     COLOR="${color1}-${color2}"
-    echo $COLOR
     return
   fi
   echo -ne $Y"Enter thrid index ( 0 ~ 15 ):$G "
