@@ -45,17 +45,14 @@ reset_color() {
 
 ## Prerequisite
 Prerequisite() {
-    dependencies=(convert feh gpick)
-    for dependency in "${dependencies[@]}"; do
+    for dependency in convert feh gpick ; do
         type -p "$dependency" &>/dev/null || {
             echo -e ${RED}"ERROR: Could not find ${GREEN}'${dependency}'${RED}, is it installed?" >&2
             { reset_color; exit 1; }
         }
     done
 
-	if [[ ! -d "$DIR" ]]; then
-		mkdir -p "$DIR"   
-	fi
+	[ ! -d "$DIR" ] && mkdir -p "$DIR"
 }
 
 ## Usage
@@ -446,8 +443,7 @@ get_random_number() {
 ## Generate random color
 get_random_color() {
 	RCOLOR="#"
-	for i in 1 2 3 4 5 6
-	do
+	for i in {1..6}; do
 		get_random_number "16"
 		case $RNUM in
 			"1") NEXTDIGIT="1";;
