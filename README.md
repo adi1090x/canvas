@@ -30,7 +30,7 @@ A `bash` script to generate and apply different types of **gradient** & **blured
 
 + `imagemagick`
 + `feh`
-+ `gpick`
++ `xcolor`
 + `xrandr` (only if you use it on xfce)
 
 ### Installation
@@ -53,7 +53,7 @@ $ ./canvas -h
 ┏━╸┏━┓┏┓╻╻ ╻┏━┓┏━┓
 ┃  ┣━┫┃┗┫┃┏┛┣━┫┗━┓
 ┗━╸╹ ╹╹ ╹┗┛ ╹ ╹┗━┛
-Canvas V2.0  : The Wallpaper Generator.
+Canvas V3.0  : The Wallpaper Generator.
 Developed By : Aditya Shakya (@adi1090x)
 
 Usage : canvas [-h] [-S wxh] [-B] [-s] [-l] [-r] [-t] [-b] [-p] [-n] [-a] [-R]
