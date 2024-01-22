@@ -75,7 +75,7 @@ Options:
 
 ### Usage
 
-Though you can pick colors, Here's a [list](https://imagemagick.org/www/script/color.php) of all supported color names.
+Though you can pick colors, Here's a [list](https://imagemagick.org/script/color.php) of all supported color names.
 
 **1**. Generate random blured wallpaper...
 
