@@ -49,7 +49,7 @@ reset_color() {
 
 ## Prerequisite
 Prerequisite() {
-    dependencies=(convert feh xcolor)
+    dependencies=(convert feh)
     for dependency in "${dependencies[@]}"; do
         type -p "$dependency" &>/dev/null || {
             echo -e ${RED}"ERROR: Could not find ${GREEN}'${dependency}'${RED}, is it installed?" >&2
@@ -60,6 +60,16 @@ Prerequisite() {
 	if [[ ! -d "$DIR" ]]; then
 		mkdir -p "$DIR"   
 	fi
+}
+
+XcolorPrerequisite() {
+    dependencies=(xcolor)
+    for dependency in "${dependencies[@]}"; do
+        type -p "$dependency" &>/dev/null || {
+            echo -e ${RED}"ERROR: Could not find ${GREEN}'${dependency}'${RED}, is it installed?" >&2
+            { reset_color; exit 1; }
+        }
+    done
 }
 
 ## Usage
@@ -180,6 +190,7 @@ show_feh() {
 
 ## Pick the colors
 color_picker() {
+    XcolorPrerequisite
 	picker_app="xcolor --format hex --preview-size 255 --scale 10"
 	if [[ "$SOLID" == "true" ]]; then
 		{ echo; echo -n ${ORANGE}"Pick a color... "; }
@@ -278,7 +289,7 @@ get_xcolors() {
 ## Get colors
 get_color() {
 	while true; do
-		{ echo; read -p ${ORANGE}"Pick Colors or Enter Colors or fetch from .Xresources file? (p/e/x): "${BLUE}; }
+		{ echo; read -p ${ORANGE}"(P)ick Colors or (E)nter Colors or fetch from .(X)resources file? Picking colors (p) requires xcolor. (p/e/x): "${BLUE}; }
 		if [[ $REPLY =~ ^[p/P/e/E/x/X]$ ]]; then
 			if [[ $REPLY == "p" ]] || [[ $REPLY == "P" ]]; then
 				color_picker
